@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TaskKeeper2.Pages.AddTask">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <StackLayout Margin="10">
+                <Button Text="Back" Clicked="GoBack_Clicked"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Name" />
+                <Entry x:Name="Heading" Text="{Binding Heading}" />
+                <Label Text="Notes" />
+
+                <Editor Text="{Binding Text}" Placeholder="Enter text here" AutoSize="TextChanges" x:Name="Text" FontSize="18" TextColor="Gray"/>
+
+                <Label Text="Done" />
+                <Switch x:Name="Complete" IsToggled="{Binding Complete}" />
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Button Text="Save" Clicked="Save_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
